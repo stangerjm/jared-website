@@ -1,0 +1,16 @@
+@import './base.css';
+
+:root {
+  --main-font-color: #004aad;
+}
+
+a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+a:hover {
+  text-decoration: underline;
+}
