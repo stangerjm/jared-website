@@ -2,13 +2,17 @@
 
 :root {
   --main-font-color: #004aad;
+  --hover-color: whitesmoke;
+}
+
+@font-face {
+  font-family: "Dortmund";
+  src: url('../assets/Dortmund.otf');
 }
 
 a {
   color: var(--main-font-color);
   text-decoration: none;
-  font-size: 2rem;
-  font-weight: bolder;
 }
 
 a:hover {

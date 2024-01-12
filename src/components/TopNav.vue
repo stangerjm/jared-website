@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 
-const navOpen = ref(true);
+const navOpen = ref(false);
 const toggleNav = () => {
   navOpen.value = !navOpen.value;
 };
@@ -10,35 +10,43 @@ const toggleNav = () => {
 
 <template>
   <nav>
-    <RouterLink to="/"><img src="../assets/logo.png" alt="Logo" /></RouterLink>
+    <RouterLink to="/" class="jeb-nav--logo"><img src="../assets/logo.png" alt="Logo" /></RouterLink>
 
-    <div>
-      <button type="button" class="jeb-nav--trigger" @click="toggleNav">
-        <span class="jeb-nav--line" />
-        <span class="jeb-nav--line" />
-        <span class="jeb-nav--line" />
-      </button>
-      <div class="jeb-nav--links" :class="navOpen ? '' : 'jeb-nav--links__hidden'">
-        <RouterLink to="/meet-jared">Meet Jared</RouterLink>
-        <span class="jeb-nav--spacer" />
-        <RouterLink to="/books">Books</RouterLink>
-        <span class="jeb-nav--spacer" />
-        <RouterLink to="/newsletter">Newsletter</RouterLink>
-        <span class="jeb-nav--spacer" />
-        <RouterLink to="/educators">Educators</RouterLink>
-        <span class="jeb-nav--spacer" />
-        <RouterLink to="/extras">Extras</RouterLink>
-      </div>
+    <button type="button" class="jeb-nav--trigger" @click="toggleNav">
+      <span class="jeb-nav--line" />
+      <span class="jeb-nav--line" />
+      <span class="jeb-nav--line" />
+    </button>
+    <div class="jeb-nav--links" :class="navOpen ? '' : 'jeb-nav--links__hidden'">
+      <RouterLink to="/meet-jared">Meet Jared</RouterLink>
+      <span class="jeb-nav--spacer" />
+      <RouterLink to="/books">Books</RouterLink>
+      <span class="jeb-nav--spacer" />
+      <RouterLink to="/newsletter">Newsletter</RouterLink>
+      <span class="jeb-nav--spacer" />
+      <RouterLink to="/educators">Educators</RouterLink>
+      <span class="jeb-nav--spacer" />
+      <RouterLink to="/extras">Extras</RouterLink>
     </div>
   </nav>
 </template>
 
 <style scoped>
+  .jeb-nav--logo {
+    border: none;
+    padding: 0;
+  }
+
+  .jeb-nav--logo:hover {
+    background: none;
+  }
+
   img {
     width: 30vw;
     min-width: 15rem;
     max-width: 40rem;
     margin-right: 2rem;
+    grid-area: logo;
   }
 
   button {
@@ -49,16 +57,24 @@ const toggleNav = () => {
 
   a {
     white-space: nowrap;
+    font-size: 1.75rem;
+  }
+
+  a:hover {
+    background: var(--hover-color);
   }
 
   nav {
-    display: flex;
+    display: grid;
+    grid-template-areas: "logo links";
     justify-content: space-between;
     align-items: center;
     padding-right: 2rem;
+    font-family: Dortmund;
   }
 
   .jeb-nav--links {
+    grid-area: links;
     width: 75%;
     display: grid;
     grid-gap: 1.5rem;
@@ -69,6 +85,7 @@ const toggleNav = () => {
 
   .jeb-nav--trigger {
     display: none;
+    grid-area: trigger;
   }
 
   .jeb-nav--spacer {
@@ -79,9 +96,21 @@ const toggleNav = () => {
   }
 
   @media screen and (max-width: 920px) {
+    nav {
+      grid-template-areas: "logo  trigger"
+                           "links links";
+    }
+
+    a {
+      border-top: 0.1rem solid black;
+      padding: 1rem 0;
+    }
+
     .jeb-nav--links {
       width: auto;
+      margin-left: 1rem;
       grid-auto-flow: row;
+      grid-gap: 0;
       right: 0;
     }
 
@@ -101,7 +130,7 @@ const toggleNav = () => {
 
     .jeb-nav--trigger:hover {
       cursor: pointer;
-      background: lightgray;
+      background: var(--hover-color);
     }
 
     .jeb-nav--line {
