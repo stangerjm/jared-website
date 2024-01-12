@@ -37,9 +37,9 @@
   .jeb-home--gallery {
     display: grid;
     grid-gap: 1rem;
-    width: 100rem;
-    height: 460px;
-    grid-template-columns: auto 290px auto;
+    width: 65vw;
+    height: 36vw;
+    grid-template-columns: 1fr 25vw 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
 
