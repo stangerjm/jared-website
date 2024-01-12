@@ -10,3 +10,7 @@ body {
   font-size: 1.6rem;
   font-family: Helvetica;
 }
+
+img {
+  max-width: 100%;
+}
