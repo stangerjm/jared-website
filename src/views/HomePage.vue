@@ -4,19 +4,30 @@
     <div class="jeb-home--gallery">
       <figure class="jeb-home--author">
         <img src="../assets/author.jpg" alt="Jared Everett Bell" />
+        <figcaption><RouterLink to="/meet-jared">Meet Jared</RouterLink></figcaption>
       </figure>
       <figure class="jeb-home--cover">
         <img src="../assets/cover-art.jpg" alt="Cover Art" />
+        <figcaption><RouterLink to="/books">Books</RouterLink></figcaption>
       </figure>
       <figure class="jeb-home--kids">
         <img src="../assets/grandkids.jpg" alt="Jared with grandkids" />
+        <figcaption><RouterLink to="/educators">Educators</RouterLink></figcaption>
       </figure>
       <figure class="jeb-home--musculor">
         <img src="../assets/musculor.png" alt="Musculor" />
+        <figcaption><RouterLink to="/newsletter">Newsletter</RouterLink></figcaption>
       </figure>
       <figure class="jeb-home--tv">
         <img src="../assets/tv.jpg" alt="TV" />
+        <figcaption><RouterLink to="/extras">Extras</RouterLink></figcaption>
       </figure>
+    </div>
+    <div class="jeb-home--socialMedia">
+      <a href="https://facebook.com" target="_blank"><img src="../assets/facebook.svg" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="../assets/instagram.svg" /></a>
+      <a href="https://twitter.com" target="_blank"><img src="../assets/twitter.svg" /></a>
+      <a href="https://tiktok.com" target="_blank"><img src="../assets/tiktok.svg" /></a>
     </div>
   </div>
 </template>
@@ -26,6 +37,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    white-space: nowrap;
   }
 
   .jeb-home--title {
@@ -46,6 +58,7 @@
   .jeb-home--gallery figure {
     padding: 0;
     margin: 0;
+    position: relative;
   }
 
   figure img {
@@ -53,6 +66,17 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 2rem;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    background: #f8f8f8;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .jeb-home--author {
@@ -78,5 +102,32 @@
   .jeb-home--tv {
     grid-row-start: 5;
     grid-row-end: 7;
+  }
+
+  .jeb-home--tv img {
+    object-position: center;
+  }
+
+  .jeb-home--socialMedia {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 2rem;
+    margin-top: 10rem;
+  }
+
+  .jeb-home--socialMedia img {
+    width: 5rem;
+  }
+
+  a {
+    color: black;
+  }
+
+  @media screen and (max-width: 920px) {
+    .jeb-home--gallery figcaption {
+      font-size: 1rem;
+      bottom: 0.5rem;
+      padding: 0.25rem;
+    }
   }
 </style>

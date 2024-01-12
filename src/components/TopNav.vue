@@ -58,10 +58,7 @@ const toggleNav = () => {
   a {
     white-space: nowrap;
     font-size: 1.75rem;
-  }
-
-  a:hover {
-    background: var(--hover-color);
+    padding: 1rem;
   }
 
   nav {
@@ -77,7 +74,7 @@ const toggleNav = () => {
     grid-area: links;
     width: 75%;
     display: grid;
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
     grid-auto-flow: column;
     align-items: center;
     margin-top: 1rem;
@@ -95,7 +92,7 @@ const toggleNav = () => {
     background: var(--main-font-color);
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 950px) {
     nav {
       grid-template-areas: "logo  trigger"
                            "links links";
@@ -103,7 +100,11 @@ const toggleNav = () => {
 
     a {
       border-top: 0.1rem solid black;
-      padding: 1rem 0;
+      padding: 1rem;
+    }
+
+    a:hover {
+      background: var(--hover-color);
     }
 
     .jeb-nav--links {
