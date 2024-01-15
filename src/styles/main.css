@@ -10,6 +10,11 @@
   src: url('../assets/Dortmund.otf');
 }
 
+body {
+  font-family: Dortmund;
+  color: var(--main-font-color);
+}
+
 a {
   color: var(--main-font-color);
   text-decoration: none;
@@ -23,6 +28,12 @@ a:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
 h2 {
   margin: 2rem 0;
+  font-size: 4rem;
 }

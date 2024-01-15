@@ -41,7 +41,7 @@
           Idaho and Brigham Young University-Provo.</p>
       </div>
       <div class="jeb-meet--item">
-        <img src="../assets/humor-code.jpg" />
+        <img src="../assets/comedy-sports.png" />
         <p>
           <span class="jeb-meet--break">He performed sketch comedy at BYU-Idaho with the sketch troupe “Humor Code”.</span>
           <span>After moving to Provo, Utah, and gaining entry to the
@@ -85,19 +85,9 @@
 </template>
 
 <style scoped>
-  h1 {
-    font-size: 5rem;
-  }
-
-  h2 {
-    font-size: 4rem;
-  }
-
   .jeb-meet {
-    color: var(--main-font-color);
     width: 60%;
     margin: 0 auto;
-    font-family: Dortmund;
   }
 
   .jeb-meet--section {
