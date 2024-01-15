@@ -2,26 +2,36 @@
   <div class="jeb-home">
     <h1><img class="jeb-home--title" src="../assets/title.png" alt="Saturday Morning: Mayhem of Musculor" /></h1>
     <div class="jeb-home--gallery">
-      <figure class="jeb-home--author">
-        <img src="../assets/author.jpg" alt="Jared Everett Bell" />
-        <figcaption><RouterLink to="/meet-jared">Meet Jared</RouterLink></figcaption>
-      </figure>
-      <figure class="jeb-home--cover">
-        <img src="../assets/cover-art.jpg" alt="Cover Art" />
-        <figcaption><RouterLink to="/books">Books</RouterLink></figcaption>
-      </figure>
-      <figure class="jeb-home--kids">
-        <img src="../assets/grandkids.jpg" alt="Jared with grandkids" />
-        <figcaption><RouterLink to="/educators">Educators</RouterLink></figcaption>
-      </figure>
-      <figure class="jeb-home--musculor">
-        <img src="../assets/musculor.png" alt="Musculor" />
-        <figcaption><RouterLink to="/newsletter">Newsletter</RouterLink></figcaption>
-      </figure>
-      <figure class="jeb-home--tv">
-        <img src="../assets/tv.jpg" alt="TV" />
-        <figcaption><RouterLink to="/extras">Extras</RouterLink></figcaption>
-      </figure>
+      <RouterLink to="/meet-jared" class="jeb-home--author">
+        <figure>
+          <img src="../assets/author.jpg" alt="Jared Everett Bell" />
+          <figcaption>Meet Jared</figcaption>
+        </figure>
+      </RouterLink>
+      <RouterLink to="/books" class="jeb-home--cover">
+        <figure>
+          <img src="../assets/cover-art.jpg" alt="Cover Art" />
+          <figcaption>Books</figcaption>
+        </figure>
+      </RouterLink>
+      <RouterLink to="/educators" class="jeb-home--kids">
+        <figure>
+          <img src="../assets/grandkids.jpg" alt="Jared with grandkids" />
+          <figcaption>Educators</figcaption>
+        </figure>
+      </RouterLink>
+      <RouterLink to="/newsletter" class="jeb-home--musculor">
+        <figure>
+          <img src="../assets/musculor.png" alt="Musculor" />
+          <figcaption>Newsletter</figcaption>
+        </figure>
+      </RouterLink>
+      <RouterLink to="/extras" class="jeb-home--tv">
+        <figure>
+          <img src="../assets/tv.jpg" alt="TV" />
+          <figcaption>Extras</figcaption>
+        </figure>
+      </RouterLink>
     </div>
     <div class="jeb-home--socialMedia">
       <a href="https://facebook.com" target="_blank"><img src="../assets/facebook.svg" /></a>
@@ -59,6 +69,8 @@
     padding: 0;
     margin: 0;
     position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   figure img {
@@ -79,9 +91,12 @@
     transform: translateX(-50%);
   }
 
+  a figcaption:hover, figure:hover figcaption {
+    text-decoration: underline;
+  }
+
   .jeb-home--author {
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row: 1 / 4;
   }
 
   .jeb-home--cover {
