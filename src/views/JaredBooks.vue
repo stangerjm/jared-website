@@ -3,11 +3,16 @@
     <h1><img class="jeb-books--title" src="../assets/title-only.png" alt="Saturday Morning" /></h1>
     <main>
       <div class="jeb-books--cover">
-        <img src="../assets/cover-art.jpg" />
-        <a href="https://amazon.com" target="_blank">BUY NOW</a>
+        <img class="jeb-books--coverArt" src="../assets/cover-art.jpg" alt="Cover art" />
+        <a href="https://www.amazon.com/Saturday-Morning-Jared-Everett-Bell/dp/B0CRMWH7L8/ref=sr_1_1?crid=NKJAL7L48NWE&keywords=Saturday+Morning+Mayhem&qid=1706324689&sprefix=saturday+morning+mayhem%2Caps%2C166&sr=8-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.niftybuttons.com/amazon/amazon-button9.png" alt="Available on Amazon">
+        </a>
+        <a class="jeb-books--buySigned" href="https://forms.gle/AAYVqYKsYaa32Z2J7" target="_blank" rel="noopener noreferrer">
+          BUY SIGNED COPY
+        </a>
       </div>
       <div>
-        <img src="../assets/subtitle-only.jpg" />
+        <img src="../assets/subtitle-only.jpg" alt="Mayhem of Musculor" />
         <p>Max Santel, a nine-year-old Saturday Morning cartoon
           fanatic. Rebecca Santel, a mother who simply wants
           her kids’ chores done. What does Max do instead of
@@ -18,7 +23,7 @@
           escape from their television imprisonment. And who
           is called to be the hero to fix the mess? You guessed
           it, Max Santel!</p>
-        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -32,25 +37,33 @@
   main {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-gap: 2rem;
+    grid-gap: 5rem;
     width: 60%;
     margin: 0 auto;
+    font-size: 2rem;
   }
 
   p {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+  }
+
+  .jeb-books--cover a.jeb-books--buySigned {
+    background-color: var(--button-background-color);
+    padding: 1rem;
   }
 
   a {
     display: inline-block;
     text-align: center;
-    background: black;
     color: white;
-    padding: 2rem;
-    border-radius: 10rem;
+    border-radius: 1rem;
     width: 100%;
     font-size: 2rem;
+  }
+
+  img {
+    width: 100%;
   }
 
   a:hover {
@@ -62,6 +75,10 @@
     flex-direction: column;
     align-items: center;
     width: 20rem;
+  }
+
+  .jeb-books--coverArt {
+    margin-bottom: 1rem;
   }
 
   .jeb-books--cover a {

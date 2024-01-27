@@ -22,9 +22,9 @@ const toggleNav = () => {
       <span class="jeb-nav--spacer" />
       <RouterLink to="/books">Books</RouterLink>
       <span class="jeb-nav--spacer" />
-      <RouterLink to="/newsletter">Newsletter</RouterLink>
+      <RouterLink to="/schoolvisits">School Visits</RouterLink>
       <span class="jeb-nav--spacer" />
-      <RouterLink to="/educators">Educators</RouterLink>
+      <RouterLink to="/newsletter">Newsletter</RouterLink>
       <span class="jeb-nav--spacer" />
       <RouterLink to="/extras">Extras</RouterLink>
     </div>
@@ -67,7 +67,6 @@ const toggleNav = () => {
     justify-content: space-between;
     align-items: center;
     padding-right: 2rem;
-    font-family: Dortmund;
   }
 
   .jeb-nav--links {

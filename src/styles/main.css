@@ -2,6 +2,8 @@
 
 :root {
   --main-font-color: #004aad;
+  --button-background-color: #004aad;
+  --button-background-active-color: #2073e1;
   --hover-color: whitesmoke;
 }
 
@@ -10,8 +12,11 @@
   src: url('../assets/Dortmund.otf');
 }
 
-body {
+* {
   font-family: Dortmund;
+}
+
+body {
   color: var(--main-font-color);
 }
 
@@ -36,4 +41,31 @@ h1 {
 h2 {
   margin: 2rem 0;
   font-size: 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid black;
+}
+
+.jeb-formError {
+  font-size: 1.25rem;
+  color: red;
+  margin-top: 0.5rem;
 }

@@ -4,7 +4,7 @@
     <div class="jeb-home--gallery">
       <RouterLink to="/meet-jared" class="jeb-home--author">
         <figure>
-          <img src="../assets/author.jpg" alt="Jared Everett Bell" />
+          <img class="jeb-home--jared" src="../assets/author.jpg" alt="Jared Everett Bell" />
           <figcaption>Meet Jared</figcaption>
         </figure>
       </RouterLink>
@@ -14,10 +14,10 @@
           <figcaption>Books</figcaption>
         </figure>
       </RouterLink>
-      <RouterLink to="/educators" class="jeb-home--kids">
+      <RouterLink to="/schoolvisits" class="jeb-home--kids">
         <figure>
           <img src="../assets/grandkids.jpg" alt="Jared with grandkids" />
-          <figcaption>Educators</figcaption>
+          <figcaption>School Visits</figcaption>
         </figure>
       </RouterLink>
       <RouterLink to="/newsletter" class="jeb-home--musculor">
@@ -34,10 +34,9 @@
       </RouterLink>
     </div>
     <div class="jeb-home--socialMedia">
-      <a href="https://facebook.com" target="_blank"><img src="../assets/facebook.svg" /></a>
-      <a href="https://instagram.com" target="_blank"><img src="../assets/instagram.svg" /></a>
-      <a href="https://twitter.com" target="_blank"><img src="../assets/twitter.svg" /></a>
-      <a href="https://tiktok.com" target="_blank"><img src="../assets/tiktok.svg" /></a>
+      <a href="https://www.facebook.com/profile.php?id=100088101285779" target="_blank" rel="noopener noreferrer"><img src="../assets/facebook.svg" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/jaredbell90" target="_blank" rel="noopener noreferrer"><img src="../assets/instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.tiktok.com/@jaredeverettbell?lang=en" target="_blank" rel="noopener noreferrer"><img src="../assets/tiktok.svg" alt="TikTok" /></a>
     </div>
   </div>
 </template>
@@ -48,6 +47,10 @@
     align-items: center;
     flex-direction: column;
     white-space: nowrap;
+  }
+
+  .jeb-home--jared {
+    object-position: 0 -6rem;
   }
 
   .jeb-home--title {
@@ -138,11 +141,25 @@
     color: black;
   }
 
+  @media screen and (max-width: 1200px) {
+    .jeb-home--jared {
+      object-position: center;
+    }
+  }
+
   @media screen and (max-width: 920px) {
     .jeb-home--gallery figcaption {
       font-size: 1rem;
       bottom: 0.5rem;
       padding: 0.25rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .jeb-home--gallery {
+      width: 90vw;
+      height: 50vw;
+      grid-template-columns: 1fr 30vw 1fr;
     }
   }
 </style>

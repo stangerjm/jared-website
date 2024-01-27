@@ -25,8 +25,8 @@ const router = createRouter({
       component: () => import('../views/NewsletterSignup.vue'),
     },
     {
-      path: '/educators',
-      name: 'educators',
+      path: '/schoolvisits',
+      name: 'schoolvisits',
       component: () => import('../views/EducatorGuide.vue'),
     },
     {
