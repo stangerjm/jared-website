@@ -4,7 +4,7 @@
     <main>
       <div class="jeb-books--cover">
         <img class="jeb-books--coverArt" src="../assets/cover-art.jpg" alt="Cover art" />
-        <a href="https://www.amazon.com/Saturday-Morning-Jared-Everett-Bell/dp/B0CRMWH7L8/ref=sr_1_1?crid=NKJAL7L48NWE&keywords=Saturday+Morning+Mayhem&qid=1706324689&sprefix=saturday+morning+mayhem%2Caps%2C166&sr=8-1" target="_blank" rel="noopener noreferrer">
+        <a href="https://a.co/d/1ic4m4e" target="_blank" rel="noopener noreferrer">
           <img src="https://www.niftybuttons.com/amazon/amazon-button9.png" alt="Available on Amazon">
         </a>
         <a class="jeb-books--buySigned" href="https://forms.gle/AAYVqYKsYaa32Z2J7" target="_blank" rel="noopener noreferrer">
