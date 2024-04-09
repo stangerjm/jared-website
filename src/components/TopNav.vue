@@ -27,6 +27,8 @@ const toggleNav = () => {
       <RouterLink to="/newsletter">Newsletter</RouterLink>
       <span class="jeb-nav--spacer" />
       <RouterLink to="/extras">Extras</RouterLink>
+      <span class="jeb-nav--spacer" />
+      <RouterLink to="/parents">Parents</RouterLink>
     </div>
   </nav>
 </template>
@@ -91,7 +93,7 @@ const toggleNav = () => {
     background: var(--main-font-color);
   }
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1180px) {
     nav {
       grid-template-areas: "logo  trigger"
                            "links links";

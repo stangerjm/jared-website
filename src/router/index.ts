@@ -34,6 +34,11 @@ const router = createRouter({
       name: 'extras',
       component: () => import('../views/AboutExtras.vue'),
     },
+    {
+      path: '/parents',
+      name: 'parents',
+      component: () => import('../views/ParentsForm.vue'),
+    },
   ],
 });
 
